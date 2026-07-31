@@ -1,7 +1,16 @@
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.nav-links');
 if (menuButton && navigation) {
-  menuButton.addEventListener('click', () => navigation.classList.toggle('open'));
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.addEventListener('click', () => {
+    const open = navigation.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+  navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navigation.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', 'false');
+  }));
 }
 
 const detailHero = document.querySelector('.detail-hero');
@@ -108,4 +117,64 @@ if (triggers.length) {
   triggers.forEach(trigger => trigger.addEventListener('click', () => openModal(trigger)));
   modal.querySelectorAll('[data-close-modal]').forEach(button => button.addEventListener('click', closeModal));
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+}
+
+// Filtro accesible del portafolio por tipología.
+const projectFilters = document.querySelectorAll('[data-project-filter]');
+const projectGroups = document.querySelectorAll('.project-group');
+if (projectFilters.length && projectGroups.length) {
+  projectFilters.forEach(filter => filter.addEventListener('click', () => {
+    const category = filter.dataset.projectFilter;
+    projectFilters.forEach(item => {
+      const selected = item === filter;
+      item.classList.toggle('active', selected);
+      item.setAttribute('aria-pressed', String(selected));
+    });
+    const legacyIds = {industrial_logistico: 'industrial-log-stico', hoteleria_entretenimiento: 'hoteler-a-entretenimiento'};
+    const targetId = legacyIds[category.replaceAll('-', '_')] || category;
+    projectGroups.forEach(group => {
+      group.hidden = category !== 'all' && group.id !== targetId;
+    });
+    const visible = [...projectGroups].filter(group => !group.hidden).length;
+    const status = document.querySelector('.filter-status');
+    if (status) status.textContent = category === 'all' ? 'Mostrando todas las categorías.' : `Mostrando ${visible} categoría.`;
+  }));
+}
+
+// Lightbox para renders y planos disponibles en las páginas de proyecto.
+const lightboxImages = document.querySelectorAll('.plan-image img');
+if (lightboxImages.length) {
+  const lightbox = document.createElement('div');
+  lightbox.className = 'image-lightbox';
+  lightbox.setAttribute('aria-hidden', 'true');
+  lightbox.innerHTML = '<button class="image-lightbox-close" type="button" aria-label="Cerrar imagen">×</button><img alt=""><p></p>';
+  document.body.appendChild(lightbox);
+  const expandedImage = lightbox.querySelector('img');
+  const caption = lightbox.querySelector('p');
+  let sourceImage;
+  const closeLightbox = () => {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (sourceImage) sourceImage.focus({preventScroll:true});
+  };
+  lightboxImages.forEach(image => {
+    image.tabIndex = 0;
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', `${image.alt}. Ampliar imagen`);
+    const openLightbox = () => {
+      sourceImage = image;
+      expandedImage.src = image.currentSrc || image.src;
+      expandedImage.alt = image.alt;
+      caption.textContent = image.alt;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      lightbox.querySelector('button').focus();
+    };
+    image.addEventListener('click', openLightbox);
+    image.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openLightbox(); } });
+  });
+  lightbox.addEventListener('click', event => { if (event.target === lightbox || event.target.closest('.image-lightbox-close')) closeLightbox(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox(); });
 }
