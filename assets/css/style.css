@@ -61,12 +61,12 @@ a{color:inherit} img{max-width:100%;display:block}
 .list-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .list-card{background:#f3f2ef;padding:20px;min-height:120px;text-decoration:none;border:1px solid transparent}
 .list-card:hover{border-color:#9db5c9;background:#edf1f3}.list-card h3{font-size:16px;margin:0 0 8px}.list-card p{font-size:13px;color:var(--muted);line-height:1.45;margin:0}.open-hint{display:block;margin-top:13px;color:#4d7898;font-size:10px;text-transform:uppercase;letter-spacing:.08em}
-.detail-hero{min-height:62vh;color:#fff;display:flex;align-items:flex-end;background-size:cover;background-position:center}
-.detail-hero .inner{padding:110px 0 50px}.detail-hero h1{font:62px Georgia,serif;max-width:950px;line-height:1.02;margin:0 0 18px}
+.detail-hero{min-height:50vh;color:#fff;display:flex;align-items:flex-end;background-size:cover;background-position:center}
+.detail-hero .inner{padding:88px 0 38px}.detail-hero h1{font:58px Georgia,serif;max-width:950px;line-height:1.02;margin:0 0 16px}
 .tags{display:flex;gap:8px;flex-wrap:wrap}.tag{border:1px solid rgba(255,255,255,.55);padding:7px 10px;font-size:9px;letter-spacing:.08em}
 .leed-detail{display:flex;align-items:center;gap:12px;margin:14px 0 18px}.leed-detail img{width:84px;background:#fff;padding:5px}.leed-detail span{background:rgba(65,91,50,.9);border:1px solid rgba(255,255,255,.7);padding:8px 10px;font-size:9px;letter-spacing:.1em}
-.facts{display:grid;grid-template-columns:repeat(3,1fr);background:var(--line);gap:1px}.fact{background:#fff;padding:24px}.fact small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
-.scope{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;padding:70px 0}.scope.alt{background:#f0eee9}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);background:var(--line);gap:1px}.fact{background:#fff;padding:20px 24px}.fact small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+.scope{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;padding:48px 0}.scope.alt{background:#f0eee9}
 .scope h2{font:43px Georgia,serif;margin:0}.scope ul{line-height:1.8;color:#343a3f;margin:0;padding-left:20px}.scope p{line-height:1.75;color:#343a3f}
 .plan-image{padding:0 0 70px}.plan-image img{width:100%;max-height:700px;object-fit:cover}.caption{color:var(--muted);font-size:11px;margin-top:8px}
 .contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px}.contact-grid h1{font:62px Georgia,serif;margin:0}.contact-grid p{font-size:16px;color:var(--muted);line-height:1.7}
@@ -111,8 +111,8 @@ a{color:inherit} img{max-width:100%;display:block}
 .stat-values{display:flex;flex-direction:column;justify-content:center;gap:8px}.stat-values span{margin:0;font-weight:bold}
 .center-head{text-align:center;margin-bottom:32px}.center-head h2,.compact-head h2,.articles-building h2{font:38px Georgia,serif;font-weight:400;margin:0}
 .specialties-home{padding-bottom:58px}
-.specialty-grid{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line)}
-.specialty-card{text-decoration:none;text-align:center;padding:30px 17px 26px;min-height:255px;border-right:1px solid var(--line);background:#fff;transition:.25s}
+.specialty-grid{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--line)}
+.specialty-card{appearance:none;font:inherit;color:inherit;width:100%;cursor:pointer;text-decoration:none;text-align:center;padding:30px 14px 26px;min-height:255px;border:0;border-right:1px solid var(--line);background:#fff;transition:.25s}
 .specialty-card:last-child{border-right:0}.specialty-card:hover{background:#f5f7f8;transform:translateY(-3px)}
 .specialty-icon{display:block;width:48px;height:48px;margin:0 auto 18px}.specialty-icon svg{width:100%;height:100%;fill:none;stroke:#21394b;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
 .specialty-card h3{font-size:11px;line-height:1.35;text-transform:uppercase;letter-spacing:.06em;margin:0 0 13px}.specialty-card p{font-size:11px;color:#53616a;line-height:1.55;margin:0}
@@ -143,3 +143,9 @@ a{color:inherit} img{max-width:100%;display:block}
  .contact-banner-inner{display:block}.contact-banner-actions{margin-top:22px;flex-wrap:wrap}.contact-banner h2{font-size:29px}
 }
 @media(max-width:440px){.specialty-grid,.compact-project-grid{grid-template-columns:1fr}.specialty-card{border-right:0!important}.specialty-card:nth-last-child(2){border-bottom:1px solid var(--line)!important}.compact-project>img{height:220px}}
+
+/* Specialty dialogs */
+.modal-open{overflow:hidden}.specialty-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:24px}.specialty-modal.open{display:flex}.specialty-modal-backdrop{position:absolute;inset:0;background:rgba(5,18,28,.76);backdrop-filter:blur(4px)}
+.specialty-modal-panel{position:relative;width:min(820px,100%);max-height:min(82vh,760px);overflow:auto;background:#fff;padding:48px 54px 42px;box-shadow:0 24px 80px rgba(0,0,0,.3)}.specialty-modal-panel h2{font:44px Georgia,serif;margin:8px 45px 18px 0}.specialty-modal-intro{font-size:17px;line-height:1.7;color:#3e4b53;border-bottom:1px solid var(--line);padding-bottom:24px}.specialty-modal-content{columns:2;column-gap:46px;margin:24px 0}.specialty-modal-content ul{margin:0;padding-left:20px;line-height:1.62}.specialty-modal-content li{break-inside:avoid;margin-bottom:7px}.specialty-modal-group{break-inside:avoid;margin-bottom:24px}.specialty-modal-group h3{font-size:14px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 10px;color:var(--navy)}.specialty-modal-close{position:absolute;right:20px;top:16px;width:42px;height:42px;border:0;background:transparent;color:var(--navy);font-size:34px;line-height:1;cursor:pointer}.specialty-modal-action{margin-top:8px}.project-back{display:inline-flex;margin-bottom:18px;color:#fff;text-decoration:none;font-size:13px;letter-spacing:.04em}.project-back:hover{text-decoration:underline}
+@media(max-width:900px){.detail-hero{min-height:48vh}.specialty-modal-panel{padding:42px 30px 34px}.specialty-modal-panel h2{font-size:36px}.specialty-modal-content{columns:1}}
+@media(max-width:520px){.specialty-modal{padding:12px}.specialty-modal-panel{padding:38px 22px 28px;max-height:90vh}.specialty-modal-panel h2{font-size:30px}.specialty-modal-intro{font-size:15px}}
