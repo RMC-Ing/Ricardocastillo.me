@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9HFC486779"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-9HFC486779");
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>¿Cómo inspeccionar la puesta a tierra de un proyecto? | NEC 250</title>
+  <meta name="description" content="Guía práctica para inspeccionar electrodos, unión equipotencial, interruptor principal, plantas eléctricas, transformadores, pararrayos y grúas conforme a NEC 250.">
+  <link rel="canonical" href="https://ricardocastillo.me/articulos/inspeccion-puesta-tierra-proyecto-nec-250/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="¿Cómo debe inspeccionarse la puesta a tierra de un proyecto?">
+  <meta property="og:description" content="De las varillas al sistema equipotencial: una lectura práctica de NEC 250 para diseño e inspección.">
+  <meta property="og:url" content="https://ricardocastillo.me/articulos/inspeccion-puesta-tierra-proyecto-nec-250/">
+  <meta property="og:image" content="https://ricardocastillo.me/assets/images/blog/puesta-tierra-proyecto/portada-sistema-puesta-tierra.webp">
+  <meta property="article:published_time" content="2026-08-02">
+  <meta property="article:section" content="Electricidad">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"¿Cómo debe inspeccionarse la puesta a tierra de un proyecto?","description":"Guía práctica para revisar electrodos, unión equipotencial, interruptor principal, plantas eléctricas, transformadores, pararrayos y grúas.","datePublished":"2026-08-02","dateModified":"2026-08-02","inLanguage":"es","image":"https://ricardocastillo.me/assets/images/blog/puesta-tierra-proyecto/portada-sistema-puesta-tierra.webp","mainEntityOfPage":"https://ricardocastillo.me/articulos/inspeccion-puesta-tierra-proyecto-nec-250/","author":{"@type":"Person","name":"Ricardo Castillo","jobTitle":"Ingeniero Electromecánico","url":"https://ricardocastillo.me/nosotros/"},"publisher":{"@type":"Organization","name":"RMC Ingeniería Electromecánica","url":"https://ricardocastillo.me"}}</script>
+</head>
+<body>
+<header class="site-header"><div class="container nav">
+  <a class="brand" href="../../index.html">RMC<small>INGENIERÍA ELECTROMECÁNICA</small></a>
+  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+  <nav class="nav-links"><a href="../../index.html">Inicio</a><a href="../../proyectos/index.html">Proyectos</a><a href="../../especialidades/index.html">Especialidades</a><a href="../../nosotros/index.html">Nosotros</a><a class="active" href="../index.html">Blogs</a><a href="../../contacto/index.html">Contacto</a></nav>
+</div></header>
+<main>
+<article class="technical-article grounding-article">
+  <header class="article-hero"><div class="article-shell">
+    <a class="article-back" href="../index.html">← Todos los artículos</a>
+    <div class="eyebrow">De la norma a la obra · Electricidad</div>
+    <h1>¿Cómo debe inspeccionarse la puesta a tierra de un proyecto?</h1>
+    <p class="article-deck">De las varillas al sistema equipotencial: criterios prácticos para revisar el interruptor principal, plantas eléctricas, transformadores, pararrayos y equipos especiales.</p>
+    <div class="article-byline"><span>Por Ricardo Castillo · Ingeniero Electromecánico</span><time datetime="2026-08-02">2 agosto 2026</time><span>12 min de lectura</span></div>
+  </div></header>
+
+  <section class="grounding-overview" aria-label="Mapa general del sistema de puesta a tierra">
+    <div class="grounding-overview-grid">
+      <div class="grounding-overview-copy"><span>Idea central</span><h2>No se inspeccionan varillas aisladas. Se inspecciona una trayectoria eléctrica completa.</h2><p>Electrodos, conductores de protección, uniones, neutros y sistemas especiales deben formar una solución coordinada y verificable.</p></div>
+      <div class="grounding-map" role="img" aria-label="Interruptor principal, generador, transformador, pararrayos y grúa conectados a un sistema equipotencial común">
+        <div class="ground-node"><b>Interruptor principal</b><small>Unión N–T autorizada</small></div>
+        <div class="ground-node"><b>Planta eléctrica</b><small>Según transferencia</small></div>
+        <div class="ground-node"><b>Transformador</b><small>Sistema derivado</small></div>
+        <div class="ground-node"><b>Pararrayos</b><small>Bajantes y unión</small></div>
+        <div class="ground-node"><b>Grúa torre</b><small>Estructura y PE</small></div>
+        <div class="ground-bus"><span>Sistema de electrodos y red equipotencial coordinada</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="article-layout article-shell">
+    <aside class="article-toc" aria-label="Índice del artículo"><strong>En este artículo</strong><nav>
+      <a href="#funciones">1. Cinco funciones distintas</a><a href="#electrodos">2. Sistema de electrodos</a><a href="#principal">3. Interruptor principal</a><a href="#varillas">4. Varillas cobrizadas</a><a href="#plantas">5. Plantas eléctricas</a><a href="#transformadores">6. Transformadores</a><a href="#pararrayos">7. Pararrayos</a><a href="#grua">8. Caso de campo</a><a href="#pruebas">9. Pruebas</a><a href="#checklist">10. Checklist</a>
+    </nav></aside>
+    <div class="article-body">
+      <div class="article-callout key"><span>Pregunta de partida</span><p>¿Existe un sistema coordinado desde cada masa metálica hasta el punto correcto de unión y los electrodos, o solamente una colección de conductores y varillas?</p></div>
+      <p>En obra es frecuente encontrar una varilla, un conductor verde o un registro y concluir que un equipo está “aterrizado”. Esa observación aislada no demuestra que exista una trayectoria efectiva para corriente de falla, una referencia estable respecto de tierra ni una coordinación equipotencial entre los sistemas del proyecto.</p>
+      <p>La inspección debe reconstruir la cadena completa: qué sistema se alimenta, dónde se establece la unión correspondiente, cómo se conectan sus partes metálicas, qué electrodos existen, cómo están interconectados y qué evidencia demuestra continuidad, instalación y desempeño.</p>
+      <div class="nec-route" aria-label="Ruta normativa principal del artículo"><span>Ruta normativa para la inspección</span><div><b>Desempeño</b><small>NEC 250.4</small></div><div><b>Electrodos</b><small>250.50–250.70</small></div><div><b>Servicio</b><small>250.24 y 250.28</small></div><div><b>Sistemas derivados</b><small>250.30 y 250.35</small></div><div><b>Equipos especiales</b><small>250.106 y 610.61</small></div></div>
+
+      <section id="funciones"><h2>1. Antes de medir: separar cinco funciones</h2>
+        <p>La expresión <em>puesta a tierra</em> suele utilizarse para funciones diferentes. Mezclarlas conduce a errores de diseño y a inspecciones incompletas. Los criterios de desempeño de <strong>NEC 250.4(A)(1), (3), (4) y (5)</strong> permiten distinguir la referencia a tierra, la unión de materiales conductores y la trayectoria efectiva para corriente de falla; además, aclaran que la tierra no debe utilizarse como esa trayectoria efectiva.</p>
+        <div class="grounding-functions">
+          <div><b>Referencia del sistema</b><span>Relaciona un conductor del sistema eléctrico con tierra en el punto definido.</span></div>
+          <div><b>Puesta a tierra de equipos</b><span>Conecta gabinetes y masas metálicas a una trayectoria de protección.</span></div>
+          <div><b>Unión equipotencial</b><span>Reduce diferencias de potencial entre partes conductoras.</span></div>
+          <div><b>Trayectoria de falla</b><span>Debe permitir que la protección actúe con rapidez; la tierra no la sustituye.</span></div>
+          <div><b>Descargas atmosféricas</b><span>Conduce y disipa corrientes de rayo bajo un diseño específico.</span></div>
+        </div>
+        <div class="article-callout warning"><span>Error frecuente</span><p>Una resistencia baja respecto de tierra no demuestra, por sí sola, que el conductor de protección y la trayectoria de falla sean continuos y efectivos.</p></div>
+      </section>
+
+      <section id="electrodos"><h2>2. El proyecto debe leerse como un sistema de electrodos</h2>
+        <p><strong>NEC 250.50</strong> orienta a interconectar los electrodos presentes que resulten reconocidos para formar el sistema de electrodos de la edificación o estructura. La lectura se completa con <strong>250.52, 250.53, 250.64 y 250.70</strong>, que cubren los electrodos reconocidos, sus condiciones de instalación, el conductor del electrodo y los métodos de conexión. Esto evita que cada equipo termine conectado a una “tierra independiente” con potencial propio.</p>
+        <p>Según la condición real pueden intervenir acero de cimentación, electrodos embebidos en concreto, anillos, varillas, placas, mallas y otros elementos reconocidos. No todos los proyectos necesitan la misma geometría, y la existencia de un anillo perimetral debe responder al diseño, al terreno, al riesgo y a las instalaciones presentes.</p>
+        <figure class="electrode-types-figure">
+          <div class="electrode-types-visual" role="img" aria-label="Cinco configuraciones habituales de electrodos de puesta a tierra">
+            <div class="electrode-type"><span>01</span><div class="rod-array">|||||</div><b>Varillas múltiples</b><small>Arreglo definido por diseño</small></div>
+            <div class="electrode-type"><span>02</span><div class="single-rod">|</div><b>Varilla individual</b><small>Con suplementación cuando corresponda</small></div>
+            <div class="electrode-type"><span>03</span><div class="ring-rods">⌁⌁⌁</div><b>Anillo con varillas</b><small>Electrodos interconectados</small></div>
+            <div class="electrode-type"><span>04</span><div class="plate-shape"></div><b>Placa enterrada</b><small>Superficie en contacto con suelo</small></div>
+            <div class="electrode-type"><span>05</span><div class="grid-shape"></div><b>Anillo o malla</b><small>Según el diseño del proyecto</small></div>
+          </div>
+          <figcaption><strong>Figura 1.</strong> Configuraciones habituales. La geometría no sustituye la comprobación del electrodo reconocido, sus dimensiones, instalación e interconexión. Esquema conceptual RMC; no está a escala.</figcaption>
+        </figure>
+        <div class="article-table-wrap"><table><thead><tr><th>Elemento</th><th>Qué debe comprobarse</th></tr></thead><tbody>
+          <tr><td>Electrodo</td><td>Tipo reconocido, material, dimensiones, ubicación, contacto con el terreno y protección.</td></tr>
+          <tr><td>Conductor</td><td>Calibre, recorrido, continuidad, protección mecánica y terminaciones.</td></tr>
+          <tr><td>Conexión</td><td>Conector, soldadura, listado, compatibilidad de materiales y accesibilidad.</td></tr>
+          <tr><td>Interconexión</td><td>Relación con cimentación, servicio, transformadores, generadores y pararrayos.</td></tr>
+          <tr><td>Evidencia</td><td>Planos, fotografías, fichas, certificados, pruebas y condición conforme a obra.</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section id="principal"><h2>3. El punto donde neutro y tierra se encuentran</h2>
+        <p>En el medio de desconexión principal del servicio se establece la unión correspondiente entre el conductor puesto a tierra —normalmente el neutro—, el gabinete, la barra de tierra y el sistema de electrodos. <strong>NEC 250.24(A) y (D), 250.28 y 250.92</strong> orientan la conexión del sistema alimentado por el servicio, el conductor del electrodo, el puente principal de unión y la unión del equipo de servicio. A partir de ese punto, <strong>250.24(A)(5) y 408.40</strong> sustentan la separación del neutro y el conductor de protección en los tableros derivados.</p>
+        <div class="service-bond-diagram" role="img" aria-label="Comparación entre interruptor principal y tablero derivado">
+          <div class="bond-panel service"><span>Servicio</span><h3>Interruptor principal</h3><div class="bond-bars"><b>N</b><i>Unión principal</i><b>PE</b></div><ul><li>Neutro unido en el punto autorizado.</li><li>Gabinete y barra de tierra conectados.</li><li>Conductor hacia el sistema de electrodos.</li></ul></div>
+          <div class="bond-arrow">→</div>
+          <div class="bond-panel downstream"><span>Aguas abajo</span><h3>Tablero derivado</h3><div class="bond-bars separate"><b>N</b><i>Separados</i><b>PE</b></div><ul><li>Neutro aislado del gabinete.</li><li>Barra PE unida al gabinete.</li><li>Sin puentes neutro–tierra adicionales.</li></ul></div>
+        </div>
+        <div class="article-callout key"><span>Inspección</span><p>No basta con encontrar el “primer breaker”. Debe confirmarse cuál equipo constituye realmente el medio de desconexión del servicio y dónde está autorizado el puente principal de unión.</p></div>
+      </section>
+
+      <section id="varillas"><h2>4. Varillas cobrizadas: más que clavar y medir</h2>
+        <p>Las varillas son una solución habitual, pero su aceptación no debe reducirse a observar que existe cobre ni a obtener un único valor de resistencia. <strong>NEC 250.52(A)(5), 250.53(A), 250.53(G) y 250.70</strong> orientan la identificación del electrodo, su suplementación y separación cuando correspondan, la instalación en el terreno y las conexiones. La inspección debe verificar producto, dimensiones, profundidad, separación, conexión, protección y relación con los demás electrodos.</p>
+        <ul><li>Identificar fabricante, material, diámetro, longitud y certificación.</li><li>Confirmar instalación a profundidad completa y ubicación documentada.</li><li>Verificar separación y electrodo suplementario cuando corresponda.</li><li>Revisar abrazaderas, soldaduras, corrosión y compatibilidad de metales.</li><li>Evitar que el registro o el concreto oculten una conexión imposible de inspeccionar.</li></ul>
+        <p>El conocido criterio de 25 Ω debe leerse dentro del artículo aplicable y de la edición adoptada. No reemplaza los requisitos de tipo, instalación, interconexión ni continuidad.</p>
+      </section>
+
+      <section id="plantas"><h2>5. Plantas eléctricas: primero entender la transferencia</h2>
+        <p>La puesta a tierra de una planta depende, entre otros factores, de si el interruptor de transferencia conmuta el neutro. Esa decisión determina si la fuente se trata como sistema derivado separadamente y dónde corresponde establecer la unión del conductor puesto a tierra. <strong>NEC 250.30</strong> desarrolla los sistemas derivados separadamente y <strong>250.35</strong> atiende generadores instalados permanentemente; su aplicación depende del esquema real de transferencia.</p>
+        <div class="generator-compare">
+          <div><span>Neutro no conmutado</span><b>La unión principal permanece asociada al servicio.</b><p>Debe evitarse crear en el generador una segunda unión que produzca corriente por conductores de protección y partes metálicas.</p></div>
+          <div><span>Neutro conmutado</span><b>Puede constituir un sistema derivado separadamente.</b><p>El punto de unión y el conductor hacia el sistema de electrodos deben definirse conforme al esquema y a los equipos instalados.</p></div>
+        </div>
+        <p>La revisión debe incluir diagrama unifilar, número de polos del transfer, conexión interna del generador, protección del neutro, conductor de protección, electrodo y coordinación con el sistema general.</p>
+      </section>
+
+      <section id="transformadores"><h2>6. Cámara de transformadores: equipotencialidad y sistema derivado</h2>
+        <p>El secundario de un transformador puede constituir un sistema derivado separadamente. Conforme a <strong>NEC 250.30(A) y 450.10</strong>, la inspección debe localizar el puente de unión del sistema, el conductor del electrodo, el punto de conexión permitido y la puesta a tierra de las partes metálicas del transformador, verificando que la unión no se duplique indebidamente.</p>
+        <p>También deben incluirse carcasa, puertas, marcos, bandejas, canalizaciones y otras masas metálicas. En instalaciones de media tensión, las tensiones de paso y contacto, la corriente de falla disponible, las exigencias de la empresa distribuidora y el diseño de malla requieren un análisis específico; no deben resolverse copiando un detalle típico de baja tensión.</p>
+        <div class="article-callout warning"><span>Límite importante</span><p>“Todo anillado” no significa instalar un conductor indiscriminado alrededor de cada recinto. La geometría y las uniones deben responder al sistema, al riesgo y al diseño de ingeniería.</p></div>
+      </section>
+
+      <section id="pararrayos"><h2>7. Pararrayos: interconectado, pero con función propia</h2>
+        <p>El sistema de protección contra descargas atmosféricas incluye captación, bajantes, uniones, distancias y terminaciones en tierra. <strong>NEC 250.60 y 250.106</strong>, leídos junto con <strong>NFPA 780</strong>, permiten entender que sus elementos no sustituyen los electrodos exigidos para la instalación eléctrica y que las terminaciones deben coordinarse e interconectarse con el sistema de electrodos según corresponda.</p>
+        <p>La revisión debe abarcar continuidad de bajantes, radios de curvatura, conexiones, corrosión, proximidad a cuerpos metálicos, unión equipotencial y protección contra sobretensiones. Cumplir NEC 250 no equivale, por sí solo, a disponer de un sistema completo conforme a NFPA 780.</p>
+      </section>
+
+      <section id="grua"><h2>8. Caso de campo: placas dentro de un cajón sobre losa</h2>
+        <p>Durante una inspección se observó un cajón construido sobre una losa de concreto. En su interior había placas de cobre dispuestas alrededor de un conductor central, relleno mineral y un registro. La revisión combinó <strong>NEC 250.52(A)(7) y 250.53(A)(4)</strong>, relativos al electrodo de placa y su instalación, con <strong>250.110 y 610.61</strong> para la puesta a tierra y unión de equipos y estructuras metálicas de grúas. No pudo comprobarse que las placas atravesaran la losa, estuvieran enterradas en suelo natural o continuaran hasta otro electrodo reconocido.</p>
+        <figure class="article-figure grounding-case-hero"><button class="article-image-button" type="button" data-image="../../assets/images/blog/puesta-tierra-proyecto/vista-general-caso-grua.webp" aria-label="Ampliar fotografías del caso de campo"><img src="../../assets/images/blog/puesta-tierra-proyecto/vista-general-caso-grua.webp" alt="Cuatro fotografías del cajón, relleno mineral y placas de cobre observados durante la inspección"></button><figcaption><strong>Figura 2.</strong> Condición observada antes y después del relleno. Las fotografías documentan el conjunto, pero no demuestran contacto con terreno natural bajo la losa.</figcaption></figure>
+        <div class="field-gallery">
+          <figure><button class="article-image-button" type="button" data-image="../../assets/images/blog/puesta-tierra-proyecto/cajon-sobre-losa.webp"><img src="../../assets/images/blog/puesta-tierra-proyecto/cajon-sobre-losa.webp" alt="Cajón construido sobre losa de concreto"></button><figcaption>Cajón dispuesto sobre la losa.</figcaption></figure>
+          <figure><button class="article-image-button" type="button" data-image="../../assets/images/blog/puesta-tierra-proyecto/placas-cobre.webp"><img src="../../assets/images/blog/puesta-tierra-proyecto/placas-cobre.webp" alt="Placas de cobre y conductor trenzado dentro del cajón"></button><figcaption>Placas y conductor antes del relleno.</figcaption></figure>
+        </div>
+        <p>La interpretación discutida confundía el área mínima del electrodo tipo placa con el área del recinto. El requisito se refiere a la superficie del electrodo expuesta al terreno. El relleno mineral puede modificar la resistividad local, pero no demuestra que un volumen confinado sobre una losa se conecte efectivamente con la masa general de tierra.</p>
+        <figure class="plate-installation-figure">
+          <div class="plate-installation-visual" role="img" aria-label="Sección conceptual de una placa de puesta a tierra instalada bajo la superficie del terreno">
+            <div class="plate-grade"><span>Nivel del terreno</span></div>
+            <div class="plate-conductor"><span>Conductor del electrodo<br>dimensionado según NEC 250.66</span></div>
+            <div class="plate-access"><b>Registro accesible</b><small>Conexión listada y protegida</small></div>
+            <div class="plate-depth"><b>≥ 750 mm</b><small>bajo la superficie de la tierra<br>NEC 250.53(A)(4)</small></div>
+            <div class="plate-electrode"><span>Placa</span></div>
+            <div class="plate-soil"><b>Terreno natural</b><small>Área mínima expuesta al contacto con tierra según NEC 250.52(A)(7)</small></div>
+          </div>
+          <figcaption><strong>Figura 3.</strong> Lectura conceptual de una placa enterrada: la caja o el relleno no sustituyen el contacto del electrodo con el terreno ni la profundidad de instalación. La sección no define dimensiones de diseño ni sustituye los detalles aprobados.</figcaption>
+        </figure>
+        <div class="article-callout key"><span>Dictamen responsable</span><p>La condición observada no demuestra cumplimiento como electrodo de placa hasta verificar contacto efectivo con el terreno, conexión continua a un electrodo reconocido o certificación de la configuración completa.</p></div>
+      </section>
+
+      <section id="pruebas"><h2>9. Qué demuestra cada prueba —y qué no</h2>
+        <p>El desempeño de la trayectoria de falla y la evaluación de electrodos son preguntas distintas. <strong>NEC 250.4(A)(5)</strong> establece el principio de una trayectoria efectiva de falla, mientras <strong>250.53(A)(2)</strong> sitúa el criterio de 25 Ω dentro del contexto específico de determinados electrodos. Por tanto, ese valor no debe tratarse como criterio universal de aceptación para todo el proyecto.</p>
+        <div class="article-table-wrap"><table><thead><tr><th>Verificación</th><th>Qué aporta</th><th>Qué no sustituye</th></tr></thead><tbody>
+          <tr><td>Inspección visual</td><td>Geometría, materiales, uniones y condición.</td><td>Continuidad eléctrica o desempeño.</td></tr>
+          <tr><td>Continuidad</td><td>Integridad de conductores y enlaces.</td><td>Resistencia del electrodo respecto de tierra.</td></tr>
+          <tr><td>Resistencia de tierra</td><td>Comportamiento del electrodo o sistema bajo el método usado.</td><td>Tipo, profundidad, unión ni trayectoria de falla.</td></tr>
+          <tr><td>Resistividad del suelo</td><td>Características del terreno para diseño.</td><td>Condición del sistema ya construido.</td></tr>
+          <tr><td>Impedancia de falla</td><td>Capacidad de la trayectoria para operar protecciones.</td><td>Diseño de protección contra rayos.</td></tr>
+        </tbody></table></div>
+        <p>Si el electrodo permanece conectado a acero, canalizaciones, alimentación u otros electrodos, una lectura favorable puede incluir caminos paralelos. El informe debe identificar método, separación de picas, condición del suelo, conexiones existentes y alcance real del resultado.</p>
+      </section>
+
+      <section id="checklist"><h2>10. Secuencia práctica de inspección</h2>
+        <ol class="inspection-steps">
+          <li><strong>Revisar el unifilar</strong><span>Identificar servicio, fuentes alternativas, transformadores y puntos previstos de unión.</span></li>
+          <li><strong>Inventariar los electrodos</strong><span>Ubicar cimentación, anillos, varillas, placas, mallas y conexiones existentes.</span></li>
+          <li><strong>Localizar cada unión neutro–tierra</strong><span>Confirmar que exista únicamente donde corresponde al sistema analizado.</span></li>
+          <li><strong>Seguir las masas metálicas</strong><span>Gabinetes, estructuras, bandejas, tuberías y equipos deben integrarse a la trayectoria de protección.</span></li>
+          <li><strong>Verificar productos y conexiones</strong><span>Material, calibre, listado, compatibilidad, corrosión y protección mecánica.</span></li>
+          <li><strong>Coordinar sistemas especiales</strong><span>Plantas, transformadores, pararrayos, telecomunicaciones y equipos temporales.</span></li>
+          <li><strong>Definir pruebas antes de ejecutarlas</strong><span>Seleccionar el método según la pregunta técnica y controlar caminos paralelos.</span></li>
+          <li><strong>Documentar el cierre</strong><span>Planos conforme a obra, fotografías, resultados, certificados y observaciones resueltas.</span></li>
+        </ol>
+      </section>
+
+      <section><h2>Conclusión</h2>
+        <p>Una puesta a tierra confiable no es una suma de varillas. Es una red coordinada de electrodos, conductores, uniones y partes metálicas que cumple funciones distintas sin crear conexiones indebidas.</p>
+        <p>El criterio de inspección debe avanzar siempre en la misma dirección: sistema eléctrico → punto de unión → conductor de protección → masas → sistema de electrodos → pruebas → evidencia. Esa trazabilidad permite distinguir una instalación que parece conectada de una solución técnicamente defendible.</p>
+        <div class="article-callout key"><span>Para llevar a la obra</span><p>Función → punto correcto de unión → trayectoria continua → sistema equipotencial → prueba apropiada → evidencia documentada.</p></div>
+      </section>
+
+      <section class="article-references"><h2>Referencias y alcance</h2><ul>
+        <li>Reglamento para las Instalaciones Eléctricas de Panamá: adopción de NFPA 70-2020 mediante Resolución JTIA No. 035 de 15/11/2023. <a href="https://asep.gob.pa/direcciones/services/reglamentaciones/reglamentos-para-las-instalaciones-electricas/" rel="noopener">Información oficial de ASEP</a>.</li>
+        <li>NFPA 70®, National Electrical Code®, Artículo 250 y artículos aplicables a servicios, sistemas derivados, generadores y equipos. Consulte la edición adoptada.</li>
+        <li>NFPA 780®, Standard for the Installation of Lightning Protection Systems. La protección contra descargas atmosféricas debe evaluarse como un sistema especializado.</li>
+        <li>Este artículo no sustituye los planos aprobados, cálculos, requisitos de la empresa distribuidora, listados, instrucciones del fabricante ni el criterio de la autoridad competente.</li>
+      </ul></section>
+      <aside class="article-author" aria-labelledby="grounding-author-name"><div class="article-author-mark" aria-hidden="true">RC</div><div><span>Sobre el autor</span><h2 id="grounding-author-name">Ricardo Castillo</h2><strong>Ingeniero Electromecánico</strong><p>Profesional dedicado al diseño, coordinación e inspección de instalaciones electromecánicas, con un enfoque práctico orientado a convertir los requisitos normativos en soluciones técnicamente sustentadas y ejecutables.</p><a href="../../nosotros/index.html">Conocer más sobre RMC →</a></div></aside>
+    </div>
+  </div>
+  <footer class="article-footer"><div class="article-shell"><div><span>Próximamente</span><h2>Checklist descargable para inspección de puesta a tierra.</h2></div><a class="btn btn-outline" href="../index.html">Ver todos los artículos →</a></div></footer>
+</article>
+</main>
+<footer class="footer"><div class="container footer-inner"><span>© 2026 RMC Ingeniería Electromecánica</span><span>Ingeniería con criterio. Soluciones que se construyen.</span></div></footer>
+<div class="article-lightbox" role="dialog" aria-modal="true" aria-label="Fotografía ampliada" hidden><button type="button" aria-label="Cerrar imagen">×</button><img src="" alt="Fotografía ampliada del caso de campo"></div>
+<script src="../../assets/js/main.js"></script>
+<script>
+const triggers=[...document.querySelectorAll('.article-image-button')],box=document.querySelector('.article-lightbox'),close=box?.querySelector('button'),large=box?.querySelector('img');
+function setBox(open,src){if(!box)return;if(src&&large)large.src=src;box.hidden=!open;document.body.classList.toggle('modal-open',open);if(open)close.focus()}
+triggers.forEach(trigger=>trigger.addEventListener('click',()=>setBox(true,trigger.dataset.image||trigger.querySelector('img')?.src)));close?.addEventListener('click',()=>setBox(false));box?.addEventListener('click',e=>{if(e.target===box)setBox(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!box?.hidden)setBox(false)});
+</script>
+</body>
+</html>
