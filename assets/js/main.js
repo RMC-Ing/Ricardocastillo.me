@@ -178,3 +178,56 @@ if (lightboxImages.length) {
   lightbox.addEventListener('click', event => { if (event.target === lightbox || event.target.closest('.image-lightbox-close')) closeLightbox(); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox(); });
 }
+
+// Compartir artículos: menú nativo en móvil y opciones directas en escritorio.
+const articleShareRoots = document.querySelectorAll('[data-share-root]');
+if (articleShareRoots.length) {
+  const title = document.querySelector('.article-hero h1')?.textContent.trim() || document.title;
+  const url = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
+  const encodedTitle = encodeURIComponent(title);
+  const encodedUrl = encodeURIComponent(url);
+  const closeMenus = except => articleShareRoots.forEach(root => {
+    if (root === except) return;
+    root.querySelector('.article-share-menu').hidden = true;
+    root.querySelector('.article-share-trigger').setAttribute('aria-expanded', 'false');
+  });
+
+  articleShareRoots.forEach(root => {
+    const trigger = root.querySelector('.article-share-trigger');
+    const menu = root.querySelector('.article-share-menu');
+    const status = root.querySelector('.article-share-status');
+    root.querySelector('[data-share="linkedin"]').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+    root.querySelector('[data-share="whatsapp"]').href = `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`;
+    root.querySelector('[data-share="email"]').href = `mailto:?subject=${encodedTitle}&body=${encodeURIComponent(`Te comparto este artículo de RMC Ingeniería Electromecánica:\n\n${title}\n${url}`)}`;
+
+    trigger.addEventListener('click', async () => {
+      const useNativeShare = navigator.share && window.matchMedia('(max-width: 900px), (pointer: coarse)').matches;
+      if (useNativeShare) {
+        try { await navigator.share({title, text: title, url}); } catch (error) { if (error.name !== 'AbortError') status.textContent = 'No se pudo compartir.'; }
+        return;
+      }
+      const willOpen = menu.hidden;
+      closeMenus(root);
+      menu.hidden = !willOpen;
+      trigger.setAttribute('aria-expanded', String(willOpen));
+      if (willOpen) menu.querySelector('a,button').focus();
+    });
+
+    root.querySelector('[data-share="copy"]').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(url);
+        status.textContent = 'Enlace copiado';
+      } catch {
+        const field = document.createElement('textarea');
+        field.value = url; document.body.appendChild(field); field.select(); document.execCommand('copy'); field.remove();
+        status.textContent = 'Enlace copiado';
+      }
+      setTimeout(() => { status.textContent = ''; }, 2400);
+    });
+  });
+
+  document.addEventListener('click', event => {
+    if (![...articleShareRoots].some(root => root.contains(event.target))) closeMenus();
+  });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenus(); });
+}
