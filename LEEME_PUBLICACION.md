@@ -23,12 +23,14 @@ Dominio previsto: https://ricardocastillo.me
 
 No es necesario contratar WordPress para publicar este sitio estático.
 
-## Artículo sobre plenums
+## Publicación de nuevos artículos
 
-El artículo `articulos/instalaciones-electricas-plenum-nec-300-22/index.html` está completo y conservado como borrador. Mientras no se publique:
+Cada artículo debe conservarse como una entrada independiente dentro de `articulos/`. Al publicar uno nuevo:
 
-- no aparece en la página de artículos;
-- no aparece en `sitemap.xml`;
-- contiene la directiva `noindex,nofollow` para evitar su indexación accidental.
+- agregar una tarjeta nueva al inicio de `articulos/index.html`, sin eliminar ni reemplazar las tarjetas existentes;
+- ordenar las tarjetas por fecha, de la más reciente a la más antigua;
+- añadir su URL a `sitemap.xml`, sin retirar las URL de artículos publicados;
+- verificar que la tarjeta, el enlace «Todos los artículos» y la URL canónica funcionen;
+- usar `noindex,nofollow` únicamente mientras una entrada sea un borrador y retirarlo al publicarla.
 
-En la fecha de publicación se deben actualizar la fecha visible y los campos `datePublished`/`dateModified`, retirar `noindex,nofollow`, reincorporar su tarjeta a `articulos/index.html` y añadir su URL a `sitemap.xml`.
+Actualmente están publicados como entradas independientes el artículo de inspección de puesta a tierra y el artículo sobre instalaciones eléctricas en cámaras plenas.
