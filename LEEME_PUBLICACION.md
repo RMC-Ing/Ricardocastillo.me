@@ -9,7 +9,8 @@ Dominio previsto: https://ricardocastillo.me
 - SEO básico: títulos, metadescripciones, canonical, Open Graph y datos estructurados.
 - sitemap.xml, robots.txt, CNAME y .nojekyll preparados para GitHub Pages.
 - WhatsApp directo a +507 6949-2058.
-- Instagram queda como marcador "Próximamente".
+- LinkedIn enlaza al perfil profesional de Ricardo Castillo Almanza.
+- El correo de contacto corporativo es `ricardo@ricardocastillo.me`.
 
 ## Para publicar
 1. En GitHub, abrir el repositorio actual y eliminar su contenido anterior (sin eliminar el repositorio).
@@ -21,3 +22,13 @@ Dominio previsto: https://ricardocastillo.me
 7. Después de publicar, comprobar el dominio en Google Search Console y enviar `/sitemap.xml`.
 
 No es necesario contratar WordPress para publicar este sitio estático.
+
+## Artículo sobre plenums
+
+El artículo `articulos/instalaciones-electricas-plenum-nec-300-22/index.html` está completo y conservado como borrador. Mientras no se publique:
+
+- no aparece en la página de artículos;
+- no aparece en `sitemap.xml`;
+- contiene la directiva `noindex,nofollow` para evitar su indexación accidental.
+
+En la fecha de publicación se deben actualizar la fecha visible y los campos `datePublished`/`dateModified`, retirar `noindex,nofollow`, reincorporar su tarjeta a `articulos/index.html` y añadir su URL a `sitemap.xml`.
