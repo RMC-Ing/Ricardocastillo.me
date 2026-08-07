@@ -24,6 +24,39 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>
+    .plenum-cover{background:#071d2d;color:#fff;padding:0;overflow:hidden}
+    .plenum-cover-inner{display:grid;grid-template-columns:1.05fr .95fr;min-height:520px}
+    .plenum-cover-copy{padding:48px clamp(30px,5vw,72px) 54px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+    .plenum-cover-copy:after{content:"";position:absolute;left:0;right:0;bottom:-40px;height:180px;background:repeating-radial-gradient(ellipse at 30% 100%,transparent 0 7px,rgba(112,166,212,.12) 8px 9px);pointer-events:none}
+    .plenum-cover-brand{font-family:Georgia,serif;font-size:46px;line-height:.9;margin-bottom:18px;position:relative;z-index:1}
+    .plenum-cover-brand small{display:block;font:10px Arial,sans-serif;letter-spacing:.18em;margin-top:12px}
+    .plenum-cover h1{font:clamp(42px,4.6vw,72px)/1.02 Georgia,serif;font-weight:400;margin:22px 0 24px;max-width:760px;position:relative;z-index:1}
+    .plenum-cover h1 em{font-style:normal;color:#70a6d4}
+    .plenum-cover-rule{width:72px;height:3px;background:#d2ad69;margin:2px 0 24px;position:relative;z-index:1}
+    .plenum-cover-deck{font-size:15px;line-height:1.55;letter-spacing:.06em;text-transform:uppercase;max-width:620px;margin:0;position:relative;z-index:1}
+    .plenum-cover-media{min-height:520px;overflow:hidden;background:#132b3a}
+    .plenum-cover-media img{width:200%;height:100%;max-width:none;object-fit:cover;object-position:right center;transform:translateX(-50%)}
+    .plenum-hero-tools{background:#fff;border-bottom:1px solid #d7dadd}
+    .plenum-hero-tools .article-shell{padding-top:16px;padding-bottom:16px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+    .plenum-hero-tools .article-back{margin:0}
+    .plenum-hero-tools .article-byline{margin:0;color:#69747b}
+    .plenum-intro-image{margin:34px 0 42px}
+    @media(max-width:900px){
+      .plenum-cover-inner{grid-template-columns:1fr;min-height:0}
+      .plenum-cover-copy{padding:42px 7vw 44px}
+      .plenum-cover-media{min-height:300px}
+      .plenum-cover-media img{width:200%;height:300px;transform:translateX(-50%)}
+      .plenum-cover-brand{font-size:38px}
+      .plenum-cover h1{font-size:clamp(38px,10vw,58px)}
+      .plenum-cover-deck{font-size:12px}
+    }
+    @media(max-width:520px){
+      .plenum-cover-media{min-height:240px}
+      .plenum-cover-media img{height:240px}
+      .plenum-hero-tools .article-shell{align-items:flex-start}
+    }
+  </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"¿Qué instalaciones eléctricas pueden pasar por un plenum?","description":"Una lectura práctica de NEC 300.22 para diseño, coordinación e inspección MEP.","datePublished":"2026-08-02","dateModified":"2026-08-07","inLanguage":"es","image":"https://ricardocastillo.me/assets/images/blog/plenum-nec-300-22.webp","mainEntityOfPage":"https://ricardocastillo.me/articulos/instalaciones-electricas-plenum-nec-300-22/","author":{"@type":"Person","name":"Ricardo Castillo","jobTitle":"Ingeniero Electromecánico","url":"https://ricardocastillo.me/nosotros/"},"publisher":{"@type":"Organization","name":"RMC Ingeniería Electromecánica","url":"https://ricardocastillo.me"}}</script>
 </head>
 <body>
@@ -34,20 +67,29 @@
 </div></header>
 <main>
 <article class="technical-article">
-  <header class="article-hero"><div class="article-shell">
-    <a class="article-back" href="../index.html">← Todos los artículos</a>
-    <div class="article-share article-share-hero" data-share-root>
-      <button class="article-share-trigger" type="button" aria-expanded="false"><svg class="article-share-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"></path></svg> Compartir artículo</button>
-      <div class="article-share-menu" role="group" aria-label="Opciones para compartir" hidden>
-        <a href="#" data-share="linkedin" target="_blank" rel="noopener">LinkedIn</a><a href="#" data-share="whatsapp" target="_blank" rel="noopener">WhatsApp</a><a href="#" data-share="email">Correo</a><button type="button" data-share="copy">Copiar enlace</button>
-        <span class="article-share-status" role="status" aria-live="polite"></span>
+  <header class="plenum-cover">
+    <div class="plenum-cover-inner">
+      <div class="plenum-cover-copy">
+        <div class="plenum-cover-brand">RMC<small>INGENIERÍA ELECTROMECÁNICA</small></div>
+        <h1>¿Qué instalaciones eléctricas pueden pasar por un <em>plenum</em>?</h1>
+        <div class="plenum-cover-rule"></div>
+        <p class="plenum-cover-deck">Lectura práctica de NEC 300.22 para diseño, coordinación e inspección MEP.</p>
+      </div>
+      <div class="plenum-cover-media">
+        <img src="../../assets/images/blog/plenum-nec-300-22.webp" alt="Instalaciones eléctricas y MEP sobre cielo en un espacio plenum">
       </div>
     </div>
-    <div class="eyebrow">De la norma a la obra · Electricidad</div>
-    <h1>¿Qué instalaciones eléctricas pueden pasar por un plenum?</h1>
-    <p class="article-deck">Una lectura práctica de NEC 300.22 para diseño, coordinación e inspección MEP.</p>
-    <div class="article-byline"><span>Por Ricardo Castillo · Ingeniero Electromecánico</span><time datetime="2026-08-02">2 agosto 2026</time><span>8 min de lectura</span></div>
-  </div></header>
+  </header>
+  <div class="plenum-hero-tools">
+    <div class="article-shell">
+      <a class="article-back" href="../index.html">← Todos los artículos</a>
+      <div class="article-byline"><span>Por Ricardo Castillo · Ingeniero Electromecánico</span><time datetime="2026-08-02">2 agosto 2026</time><span>8 min de lectura</span></div>
+      <div class="article-share" data-share-root>
+        <button class="article-share-trigger" type="button" aria-expanded="false"><svg class="article-share-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"></path></svg> Compartir artículo</button>
+        <div class="article-share-menu" role="group" aria-label="Opciones para compartir" hidden><a href="#" data-share="linkedin" target="_blank" rel="noopener">LinkedIn</a><a href="#" data-share="whatsapp" target="_blank" rel="noopener">WhatsApp</a><a href="#" data-share="email">Correo</a><button type="button" data-share="copy">Copiar enlace</button><span class="article-share-status" role="status" aria-live="polite"></span></div>
+      </div>
+    </div>
+  </div>
   <div class="article-layout article-shell">
     <aside class="article-toc" aria-label="Índice del artículo"><strong>En este artículo</strong><nav>
       <a href="#funcion">1. Función del espacio</a><a href="#lectura">2. Lectura de NEC 300.22</a><a href="#instalacion">3. Instalación eléctrica</a><a href="#equipos">4. Cajas y equipos</a><a href="#cambio">5. Cambio mecánico</a><a href="#mep">6. Coordinación MEP</a><a href="#cpvc">7. Caso CPVC</a><a href="#secuencia">8. Secuencia práctica</a>
@@ -56,11 +98,13 @@
       <div class="article-callout key"><span>Idea central</span><p>Un cielo suspendido no es automáticamente un plenum. La clasificación depende de cómo se utiliza el espacio dentro del sistema de distribución de aire.</p></div>
       <p>En muchos proyectos, el espacio sobre el cielo raso concentra ductos, canalizaciones eléctricas, cableado de sistemas especiales, tuberías, aislamiento y equipos. Mientras ese volumen no forme parte del recorrido del aire, suele evaluarse como un espacio técnico sobre cielo. La situación cambia cuando se utiliza como retorno de aire: entonces la selección de materiales y métodos de instalación debe revisarse con otro criterio.</p>
       <p>La pregunta práctica no es solamente qué hay sobre el cielo, sino qué función cumple el espacio y qué requisitos corresponden a cada sistema instalado en él. El punto de partida eléctrico es NEC 300.22, leído junto con los artículos aplicables a cada tipo de cableado, la edición adoptada por la jurisdicción, los listados de los productos y las instrucciones de sus fabricantes.</p>
+
+      <figure class="article-figure plenum-intro-image"><button class="article-image-button" type="button" aria-label="Ampliar infografía"><img src="../../assets/images/blog/plenum-nec-300-22.webp" alt="Infografía práctica sobre instalaciones eléctricas y MEP en espacios plenum"></button><figcaption><strong>Figura 1.</strong> Guía visual de revisión para instalaciones eléctricas y MEP en espacios utilizados como plenum. Haga clic para ampliar.</figcaption></figure>
+
       <section id="funcion"><h2>1. Primero: confirmar qué función cumple el espacio</h2>
         <p>En obra se utiliza con frecuencia la palabra <em>plenum</em> para describir cualquier vacío sobre un cielo suspendido. Esa simplificación puede conducir a decisiones incorrectas. La existencia del cielo raso, por sí sola, no define la clasificación.</p>
         <h3>Retorno por ducto</h3><p>Si el aire de retorno circula por una red de ductos cerrada, el espacio exterior a esos ductos no se convierte automáticamente en un espacio utilizado para aire ambiental.</p>
         <h3>Retorno por el espacio sobre cielo</h3><p>Si las rejillas descargan al vacío sobre el cielo y ese volumen conduce el aire hacia la manejadora o hacia el punto de retorno, el espacio sí participa en el manejo del aire. Ese es el escenario que normalmente activa la revisión de NEC 300.22(C) para otros espacios utilizados para aire ambiental.</p>
-        <figure class="article-figure"><button class="article-image-button" type="button" aria-label="Ampliar infografía"><img src="../../assets/images/blog/plenum-nec-300-22.webp" alt="Infografía: retorno por ducto frente a retorno por plenum, cableado expuesto y canalizado, y revisión de CPVC"></button><figcaption><strong>Figura 1.</strong> Comparación de sistemas de retorno y puntos de revisión sobre cielo. Haga clic para ampliar.</figcaption></figure>
         <div class="article-callout warning"><span>Pregunta de campo</span><p>¿El aire de retorno viaja por un ducto dedicado o utiliza realmente el espacio sobre el cielo como parte de su recorrido?</p></div>
       </section>
       <section id="lectura"><h2>2. Cómo leer NEC 300.22 sin convertirlo en una lista simplista</h2>
