@@ -18,7 +18,10 @@
   <meta property="og:title" content="¿Qué instalaciones eléctricas pueden pasar por un plenum?">
   <meta property="og:description" content="Una lectura práctica de NEC 300.22 para diseño, coordinación e inspección MEP.">
   <meta property="og:url" content="https://ricardocastillo.me/articulos/instalaciones-electricas-plenum-nec-300-22/">
-  <meta property="og:image" content="https://ricardocastillo.me/assets/images/blog/plenum-nec-300-22.webp">
+  <meta property="og:image" content="https://ricardocastillo.me/assets/images/blog/plenum-portada.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="¿Qué instalaciones eléctricas pueden pasar por un plenum? — RMC Ingeniería Electromecánica">
   <meta property="article:published_time" content="2026-08-02">
   <meta property="article:section" content="Electricidad">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,8 +29,8 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <style>
     .plenum-cover{background:#071d2d;color:#fff;padding:0;overflow:hidden}
-    .plenum-cover-inner{display:grid;grid-template-columns:1.05fr .95fr;min-height:520px}
-    .plenum-cover-copy{padding:48px clamp(30px,5vw,72px) 54px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+    .plenum-cover-inner{display:flex;min-height:520px;isolation:isolate}
+    .plenum-cover-copy{width:57%;padding:48px clamp(30px,5vw,72px) 54px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;z-index:2}
     .plenum-cover-copy:after{content:"";position:absolute;left:0;right:0;bottom:-40px;height:180px;background:repeating-radial-gradient(ellipse at 30% 100%,transparent 0 7px,rgba(112,166,212,.12) 8px 9px);pointer-events:none}
     .plenum-cover-brand{font-family:Georgia,serif;font-size:46px;line-height:.9;margin-bottom:18px;position:relative;z-index:1}
     .plenum-cover-brand small{display:block;font:10px Arial,sans-serif;letter-spacing:.18em;margin-top:12px}
@@ -35,29 +38,29 @@
     .plenum-cover h1 em{font-style:normal;color:#70a6d4}
     .plenum-cover-rule{width:72px;height:3px;background:#d2ad69;margin:2px 0 24px;position:relative;z-index:1}
     .plenum-cover-deck{font-size:15px;line-height:1.55;letter-spacing:.06em;text-transform:uppercase;max-width:620px;margin:0;position:relative;z-index:1}
-    .plenum-cover-media{min-height:520px;overflow:hidden;background:#132b3a}
-    .plenum-cover-media img{width:200%;height:100%;max-width:none;object-fit:cover;object-position:right center;transform:translateX(-50%)}
+    .plenum-cover-media{width:50%;min-height:520px;margin-left:-7%;overflow:hidden;background:#132b3a;clip-path:polygon(15% 0,100% 0,100% 100%,0 100%);position:relative;z-index:1}
+    .plenum-cover-media img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:58% center}
     .plenum-hero-tools{background:#fff;border-bottom:1px solid #d7dadd}
     .plenum-hero-tools .article-shell{padding-top:16px;padding-bottom:16px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
     .plenum-hero-tools .article-back{margin:0}
     .plenum-hero-tools .article-byline{margin:0;color:#69747b}
     .plenum-intro-image{margin:34px 0 42px}
     @media(max-width:900px){
-      .plenum-cover-inner{grid-template-columns:1fr;min-height:0}
-      .plenum-cover-copy{padding:42px 7vw 44px}
-      .plenum-cover-media{min-height:300px}
-      .plenum-cover-media img{width:200%;height:300px;transform:translateX(-50%)}
+      .plenum-cover-inner{display:block;min-height:0}
+      .plenum-cover-copy{width:auto;padding:42px 7vw 64px}
+      .plenum-cover-media{width:100%;min-height:310px;height:310px;margin:-28px 0 0;clip-path:polygon(0 13%,100% 0,100% 100%,0 100%)}
+      .plenum-cover-media img{height:100%;object-position:center 45%}
       .plenum-cover-brand{font-size:38px}
       .plenum-cover h1{font-size:clamp(38px,10vw,58px)}
       .plenum-cover-deck{font-size:12px}
     }
     @media(max-width:520px){
-      .plenum-cover-media{min-height:240px}
-      .plenum-cover-media img{height:240px}
+      .plenum-cover-copy{padding-bottom:56px}
+      .plenum-cover-media{min-height:245px;height:245px;margin-top:-24px;clip-path:polygon(0 11%,100% 0,100% 100%,0 100%)}
       .plenum-hero-tools .article-shell{align-items:flex-start}
     }
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"¿Qué instalaciones eléctricas pueden pasar por un plenum?","description":"Una lectura práctica de NEC 300.22 para diseño, coordinación e inspección MEP.","datePublished":"2026-08-02","dateModified":"2026-08-07","inLanguage":"es","image":"https://ricardocastillo.me/assets/images/blog/plenum-nec-300-22.webp","mainEntityOfPage":"https://ricardocastillo.me/articulos/instalaciones-electricas-plenum-nec-300-22/","author":{"@type":"Person","name":"Ricardo Castillo","jobTitle":"Ingeniero Electromecánico","url":"https://ricardocastillo.me/nosotros/"},"publisher":{"@type":"Organization","name":"RMC Ingeniería Electromecánica","url":"https://ricardocastillo.me"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"¿Qué instalaciones eléctricas pueden pasar por un plenum?","description":"Una lectura práctica de NEC 300.22 para diseño, coordinación e inspección MEP.","datePublished":"2026-08-02","dateModified":"2026-08-07","inLanguage":"es","image":"https://ricardocastillo.me/assets/images/blog/plenum-portada.webp","mainEntityOfPage":"https://ricardocastillo.me/articulos/instalaciones-electricas-plenum-nec-300-22/","author":{"@type":"Person","name":"Ricardo Castillo","jobTitle":"Ingeniero Electromecánico","url":"https://ricardocastillo.me/nosotros/"},"publisher":{"@type":"Organization","name":"RMC Ingeniería Electromecánica","url":"https://ricardocastillo.me"}}</script>
 </head>
 <body>
 <header class="site-header"><div class="container nav">
@@ -76,7 +79,7 @@
         <p class="plenum-cover-deck">Lectura práctica de NEC 300.22 para diseño, coordinación e inspección MEP.</p>
       </div>
       <div class="plenum-cover-media">
-        <img src="../../assets/images/blog/plenum-nec-300-22.webp" alt="Instalaciones eléctricas y MEP sobre cielo en un espacio plenum">
+        <img src="../../assets/images/blog/plenum-instalaciones-hero.webp" alt="Instalaciones eléctricas y MEP coordinadas sobre un cielo suspendido">
       </div>
     </div>
   </header>
