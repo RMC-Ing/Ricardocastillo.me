@@ -182,7 +182,7 @@ if (lightboxImages.length) {
 // Compartir artículos: menú nativo en móvil y opciones directas en escritorio.
 const articleShareRoots = document.querySelectorAll('[data-share-root]');
 if (articleShareRoots.length) {
-  const title = document.querySelector('.article-hero h1')?.textContent.trim() || document.title;
+  const title = document.querySelector('.technical-article h1')?.textContent.trim() || document.title;
   const url = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
   const encodedTitle = encodeURIComponent(title);
   const encodedUrl = encodeURIComponent(url);
