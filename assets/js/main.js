@@ -22,7 +22,8 @@ if (detailHero) {
     'urgencias-pediatricas': 'urgencias-pediatricas.webp',
     'nuevo-ion': 'nuevo-ion.webp',
     'park-eleven': 'park-eleven.webp',
-    'galeras-panawest': 'galeras-panawest.webp'
+    'galeras-panawest': 'galeras-panawest.webp',
+    'jeptha-duncan': 'jeptha-duncan.webp'
   };
   const projectKey = location.pathname.split('/').filter(Boolean).pop();
   if (projectImages[projectKey]) {

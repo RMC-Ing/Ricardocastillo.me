@@ -2,6 +2,28 @@
 
 Registro corto para que cualquier asistente continúe sin pisar el trabajo del otro. Solo contexto del sitio; nada confidencial.
 
+## 2026-11-25 · Proyecto nuevo: Ampliación I.P.T. Jeptha B. Duncan (rama `proyecto-jeptha-duncan`, base `ce5c869`)
+
+### Decisión
+Ricardo aprobó el mockup y pidió publicarlo. Ficha nueva en `proyectos/jeptha-duncan/`. Datos que dio él: Institucional / Educativo; 24 de Diciembre, Panamá; «Diseño integral integrado a infraestructura existente»; ampliación de pabellones y canchas deportivas del colegio existente. Alcances: electricidad, alarma contra incendios y plomería (adaptados de Tribu, sin ascensores, medición, planta eléctrica, HVAC ni comunicaciones) y protección contra incendios solo con sistema húmedo por gabinetes de mangueras (red, isométricos, selección de gabinetes y bombeo). Estado mostrado: «2026 · Diseño».
+
+### Imágenes (`assets/images/`)
+- `jeptha-duncan.webp`: render del comedor, portada de la ficha (1600 px).
+- `jeptha-duncan-card.webp`: recorte 640×480 del mismo render para la tarjeta del inicio.
+- `jeptha-duncan-cancha.webp` y `jeptha-duncan-gimnasio.webp`: renders dentro de la ficha, con ampliación por clic.
+
+### Archivos tocados
+`proyectos/jeptha-duncan/index.html` (nuevo), `assets/js/main.js` (imagen de portada por slug), `assets/css/style.css` (cuadrícula del inicio de 7 a 8 columnas y clase `.hero-bright`), `index.html` (tarjeta), `proyectos/index.html` (tarjeta con enlace; el grupo Institucional / Educativo pasa de 03 a 04), `sitemap.xml`.
+
+### Comprobaciones hechas
+Revisión visual local (Chrome) de la ficha a 1440 y 390 px, el inicio a 1440 y 1000 px y el listado de proyectos. No se probó el dominio publicado.
+
+### Pendientes
+- **El render del gimnasio tiene un error de texto en el letrero: dice «JEPTHA B. DUNCA» (falta la N).** Pedir render corregido y reemplazar `jeptha-duncan-gimnasio.webp`.
+- Año y estado («2026 · Diseño») son supuestos: confirmar.
+- Revisar el dominio tras el despliegue (inicio con 8 tarjetas, ficha, listado, móvil).
+
+---
 ## 2026-11-25 · Paleta 3 y ajustes de portada (rama `paleta-3-portada`, base `fc7a2e5`)
 
 ### Decisión
