@@ -13,8 +13,10 @@ Registro corto para que cualquier asistente continúe sin pisar el trabajo del o
 - `assets/css/style.css` (al final, solo con `.project-compact`): portada a 40vh (36vh en ≤900 px), relleno 72/32 px; los datos se alinean con el contenedor, con divisores finos.
 - Jeptha: `background-position:0 center` para dejar fuera el rótulo horneado del render en celular.
 
+- Jeptha: el render del gimnasio sube a donde estaba la cancha (después de «El proyecto») y la cancha multiuso pasa al final de la página. Pedido por Ricardo.
+
 ### Estado
-Commit local en la rama `ajuste-fichas-hero`; **pendiente de que Ricardo apruebe publicarlo en `main`**.
+Aprobado por Ricardo y publicado en `main`.
 
 ### Pendientes
 - El hero del inicio (`park-eleven.webp`, 1463×1400) se agranda y recorta cuanto más ancha es la ventana. Probado un tope de escala en la rama local `ajuste-hero-ancho` (sin publicar). Lo correcto es una imagen horizontal de ≥2400 px.
