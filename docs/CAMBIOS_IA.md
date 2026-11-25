@@ -2,6 +2,10 @@
 
 Registro corto para que cualquier asistente continúe sin pisar el trabajo del otro. Solo contexto del sitio; nada confidencial.
 
+## 2026-11-25 · Leyenda de los renders de Jeptha (rama `leyenda-renders-jeptha`, base `bc95a04`)
+- Pie de foto de los dos renders de `proyectos/jeptha-duncan/index.html` cambiado a: "Gimnasio auditorio. Render con fines ilustrativos del proyecto, no de construcción." y "Cancha multiuso. Render con fines ilustrativos del proyecto, no de construcción." (texto dictado por Ricardo).
+- Pendiente: el render de la portada (comedor) no tiene pie de foto; decidir si lleva la misma leyenda.
+
 ## 2026-11-25 · Portadas nuevas para Torre Riga, Tribu y Nuevo Instituto Oncológico (rama `heroes-torre-tribu-ion`, base `799a4fc`)
 
 ### Decisión
