@@ -19,7 +19,7 @@ Ricardo aprobó el mockup y pidió publicarlo. Ficha nueva en `proyectos/jeptha-
 Revisión visual local (Chrome) de la ficha a 1440 y 390 px, el inicio a 1440 y 1000 px y el listado de proyectos. No se probó el dominio publicado.
 
 ### Pendientes
-- **El render del gimnasio tiene un error de texto en el letrero: dice «JEPTHA B. DUNCA» (falta la N).** Pedir render corregido y reemplazar `jeptha-duncan-gimnasio.webp`.
+- Render del gimnasio corregido por Ricardo (letrero «JEPTHA B. DUNCAN») y reemplazado el mismo día.
 - Año y estado («2026 · Diseño») son supuestos: confirmar.
 - Revisar el dominio tras el despliegue (inicio con 8 tarjetas, ficha, listado, móvil).
 
