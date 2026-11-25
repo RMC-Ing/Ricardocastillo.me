@@ -2,6 +2,24 @@
 
 Registro corto para que cualquier asistente continúe sin pisar el trabajo del otro. Solo contexto del sitio; nada confidencial.
 
+## 2026-11-25 · Espaciado compacto en fichas de proyecto (rama `ajuste-espaciado-jeptha`, base `77c728d`)
+
+### Decisión
+Ricardo pidió reducir el aire de las franjas de alcance en **todas** las fichas. Causa: `.section` (85 px) y `.scope` (48 px) se sumaban, ~270 px de margen alrededor de listas cortas.
+
+### Cambio
+- `<main class="project-compact">` en las 8 fichas de `proyectos/*/index.html`.
+- `assets/css/style.css` (al final): `.project-compact .section` 28 px, `.scope` 30 px, `.plan-image` 20/4 px; en ≤900 px, 16/28/16 px. Fuera de las fichas no cambia nada.
+- Nueva clase `.detail-hero.hero-bright` (solo Jeptha): oscurece 24 % la portada porque el render es muy claro. `background-position:20% center` inline evita que se vea el rótulo horneado del render en celular.
+- Altura de la página a 1440 px: Tribu 2838→1938, Torre Riga 1907→1457, Park Eleven 2838→1938, Urgencias 2775→2165, Galeras 1012→900, Materno Fetal 1099→949, Nuevo ION 1128→978, Jeptha 4406→3336.
+
+### Comprobaciones hechas
+Comparación visual antes/después de las 8 fichas a 1440 px y de Tribu a 390 px. No se probó el dominio publicado.
+
+### Pendientes
+- Imagen para redes por proyecto: las fichas usan `og-linkedin.jpg` genérica. Evaluar un recorte 1200×630 del render de Jeptha.
+
+---
 ## 2026-11-25 · Proyecto nuevo: Ampliación I.P.T. Jeptha B. Duncan (rama `proyecto-jeptha-duncan`, base `ce5c869`)
 
 ### Decisión
