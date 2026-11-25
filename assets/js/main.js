@@ -26,7 +26,7 @@ if (detailHero) {
   };
   const projectKey = location.pathname.split('/').filter(Boolean).pop();
   if (projectImages[projectKey]) {
-    detailHero.style.backgroundImage = `linear-gradient(90deg,rgba(6,22,34,.88),rgba(6,22,34,.25)),url("../../assets/images/${projectImages[projectKey]}")`;
+    detailHero.style.backgroundImage = `linear-gradient(90deg,rgba(41,39,40,.88),rgba(41,39,40,.25)),url("../../assets/images/${projectImages[projectKey]}")`;
   }
   const detailInner = detailHero.querySelector('.inner');
   if (detailInner) {
