@@ -2,6 +2,24 @@
 
 Registro corto para que cualquier asistente continúe sin pisar el trabajo del otro. Solo contexto del sitio; nada confidencial.
 
+## 2026-11-25 · Portada y datos de las fichas más compactos + arreglo de la imagen de portada (rama `ajuste-fichas-hero`, base `3a5eaf4`)
+
+### Problema
+- Ricardo vio la portada de la ficha de Jeptha **sin imagen** (solo el degradado gris) dos veces. Causa: en las 8 fichas el `style` inline del hero llevaba comillas dobles dentro de un atributo con comillas dobles (`url("...")`), lo que rompía el atributo; la imagen solo aparecía cuando `main.js` la ponía. Con un `main.js` viejo en caché (no conocía el slug nuevo) la portada quedaba vacía.
+- Aún había mucho aire: la portada medía 50vh y los datos (Tipología/Ubicación/Alcance) quedaban pegados al borde de la ventana, no alineados con el contenido.
+
+### Cambio
+- Inline `style` de las 8 fichas con `url('...')` (comillas simples) y degradado en Cedar (antes azul marino en las fichas viejas); la portada ya no depende de `main.js`.
+- `assets/css/style.css` (al final, solo con `.project-compact`): portada a 40vh (36vh en ≤900 px), relleno 72/32 px; los datos se alinean con el contenedor, con divisores finos.
+- Jeptha: `background-position:0 center` para dejar fuera el rótulo horneado del render en celular.
+
+### Estado
+Commit local en la rama `ajuste-fichas-hero`; **pendiente de que Ricardo apruebe publicarlo en `main`**.
+
+### Pendientes
+- El hero del inicio (`park-eleven.webp`, 1463×1400) se agranda y recorta cuanto más ancha es la ventana. Probado un tope de escala en la rama local `ajuste-hero-ancho` (sin publicar). Lo correcto es una imagen horizontal de ≥2400 px.
+
+---
 ## 2026-11-25 · Espaciado compacto en fichas de proyecto (rama `ajuste-espaciado-jeptha`, base `77c728d`)
 
 ### Decisión
