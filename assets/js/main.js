@@ -16,11 +16,11 @@ if (menuButton && navigation) {
 const detailHero = document.querySelector('.detail-hero');
 if (detailHero) {
   const projectImages = {
-    'torre-riga': 'torre-riga.webp',
-    'tribu-coco-del-mar': 'tribu-coco-del-mar.webp',
+    'torre-riga': 'torre-riga-hero.webp',
+    'tribu-coco-del-mar': 'tribu-coco-del-mar-hero.webp',
     'hospital-materno-fetal': 'materno-fetal.webp',
     'urgencias-pediatricas': 'urgencias-pediatricas.webp',
-    'nuevo-ion': 'nuevo-ion.webp',
+    'nuevo-ion': 'nuevo-ion-hero.webp',
     'park-eleven': 'park-eleven.webp',
     'galeras-panawest': 'galeras-panawest.webp',
     'jeptha-duncan': 'jeptha-duncan.webp'

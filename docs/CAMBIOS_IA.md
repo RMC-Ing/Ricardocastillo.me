@@ -2,6 +2,23 @@
 
 Registro corto para que cualquier asistente continúe sin pisar el trabajo del otro. Solo contexto del sitio; nada confidencial.
 
+## 2026-11-25 · Portadas nuevas para Torre Riga, Tribu y Nuevo Instituto Oncológico (rama `heroes-torre-tribu-ion`, base `799a4fc`)
+
+### Decisión
+Ricardo aportó imágenes horizontales para tres fichas y eligió la terraza con muro verde para Tribu. Solo cambia la portada de cada ficha; **las tarjetas del inicio y del listado conservan las imágenes anteriores** (más angostas, funcionan mejor verticales).
+
+### Imágenes (`assets/images/`) y encuadre (`background-position` inline en cada ficha)
+- `torre-riga-hero.webp`: lobby con logo RIGA, extraído de `TORRE_RIGA_RENDERS.pdf` (1448×1086, original sin márgenes). `center 30%`.
+- `tribu-coco-del-mar-hero.webp`: terraza con muro verde (900×588, recortada sin márgenes transparentes). `center 45%`. Las 3 imágenes de Tribu traen marca de agua «VERAL»; no se quitó.
+- `nuevo-ion-hero.webp`: render de la entrada (1600×900), `center 72%` (deja fuera el rótulo del render, que dice «ONCOLOGICO» sin tilde). Con clase `hero-bright` por ser muy clara.
+- `assets/js/main.js`: mapa `projectImages` apunta a los tres archivos `-hero`. Los archivos `torre-riga.webp`, `tribu-coco-del-mar.webp` y `nuevo-ion.webp` se siguen usando en tarjetas.
+
+### Pendientes
+- **Confirmar derechos de uso**: render de Riga Design (Torre Riga) y marca VERAL (Tribu). Ricardo vio el aviso y decidió publicar.
+- Tribu mide 900 px de ancho y se amplía ~1,6× en la portada (blanda). Pedir originales de mayor resolución.
+- Ver el dominio tras el despliegue.
+
+---
 ## 2026-11-25 · Portada y datos de las fichas más compactos + arreglo de la imagen de portada (rama `ajuste-fichas-hero`, base `3a5eaf4`)
 
 ### Problema
